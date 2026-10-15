@@ -24,6 +24,17 @@ describe("EventoService.criar (integração)", () => {
     // Assert no banco: nada foi gravado
     const total = await Evento.count();
     expect(total).toBe(0);
+      it("não grava participante com e-mail inválido", async () => {
+    // Arrange: um participante com e-mail SEM @
+    const dados = { nome: "Bruno", email: "______________" };
+
+    // Act + Assert: a gravação precisa ser recusada
+    await expect(ParticipanteService.criar(dados)).rejects.toThrow();
+
+    // Assert no banco: quantos participantes devem existir agora?
+    const total = await Participante.count();
+    expect(total).toBe(___);
+  });
   });
 
   // ============================================================
@@ -38,5 +49,16 @@ describe("EventoService.criar (integração)", () => {
   // Depois, apague o ".todo" da linha abaixo e troque por um teste completo:
   //   it("grava o evento no banco com o nome correto", async () => { ... });
   // ============================================================
-  it.todo("grava o evento no banco com o nome correto");
+  it("grava o evento no banco com o nome correto", async () => {
+    // Arrange: um evento válido (data no formato ano-mês-dia)
+    const dados = { nome: "Semana de Tecnologia", data: "2026-11-20" };
+
+    // Act: chamem o service que cria o evento (não esqueçam o await!)
+    const criado = ______________________________;
+
+    // Assert: busquem o evento NO BANCO pelo id
+    const doBanco = ______________________________;
+    expect(doBanco).not.toBeNull();
+    expect(______________).toBe(______________);
+  });
 });

@@ -43,3 +43,15 @@ describe("ParticipanteService.criar (integração)", () => {
     expect(total).toBe(1);
   });
 });
+
+describe("ParticipanteService.atualizar (integração)", () => {
+  it("grava o nome novo no banco", async () => {
+    // Arrange: criem um participante "Ana", e-mail "ana@senai.br"
+    //          (usem ParticipanteService.criar, como nos outros testes)
+
+    // Act: atualizem o nome para "Ana Maria"
+    //      ParticipanteService.atualizar(id, { nome: "Ana Maria" })  ← não esqueçam o await
+
+    // Assert: busquem o participante no banco e confiram se o nome é "Ana Maria"
+  });
+});
