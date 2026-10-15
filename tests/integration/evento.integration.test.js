@@ -54,11 +54,12 @@ describe("EventoService.criar (integração)", () => {
     const dados = { nome: "Semana de Tecnologia", data: "2026-11-20" };
 
     // Act: chamem o service que cria o evento (não esqueçam o await!)
-    const criado = ______________________________;
+    const criado = await SeuService.criar(dados);
 
     // Assert: busquem o evento NO BANCO pelo id
-    const doBanco = ______________________________;
+    const doBanco = await Evento.findByPk(criado.id);
     expect(doBanco).not.toBeNull();
-    expect(______________).toBe(______________);
+    expect(doBanco.nome).toBe(dados.nome);
   });
+;
 });
