@@ -37,7 +37,7 @@ Linha "Tests:" da saída do npm run test:integration:
 Teste: ParticipanteService.atualizar (integração) > grava o nome novo do banco
 Esperado: "Ana Maria"
 Obtido: "Ana"
-O que o usuário da API veria (a rota responde 200, mas...): O usuário faz uma requisição para atualizar o seu nome, a API responde com o status de sucesso '200 OK', mas a alteração não é persistida de verdade no banco de dados (o nome atigido continua lá)
+O que o usuário da API veria (a rota responde 200, mas...): O usuário faz uma requisição para atualizar o seu nome, a API responde com o status de sucesso '200 OK', mas a alteração não é persistida de verdade no banco de dados (o nome atingido continua lá)
 
 ```
 # Ticket de saída — individual
