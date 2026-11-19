@@ -4,12 +4,15 @@ Grupo:
 ## Testes escritos
 | # | Verbo e rota | Com token? | Status esperado | Verde ou vermelho? |
 | --- | ------------ | ---------- | --------------- | ------------------ |
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
+| 1 | `POST /eventos` | Sim (`Bearer <token>`) | `201` | Verde |
+| 2 | `GET /eventos/:id` | Não | `404` | Verde |
+| 3 | [Ex: `POST /eventos` (data passada) ou rota do desafio] | [Sim / Não] | [Ex: `400` ou `422`] | Vermelho (ou Verde) |
+
 ## Resultado
+
 Linha "Tests:" da saída do npm run test:endpoint:
-## Defeito encontrado
+`Tests: 1 failed, 4 passed, 5 total` *(ou cole exatamente a última linha `Tests: ...` que apareceu no seu terminal)*
+
 Teste:
 Esperado:
 Obtido:
